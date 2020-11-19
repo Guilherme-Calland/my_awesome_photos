@@ -6,4 +6,8 @@
     <color name="colorBackground">#806200EE</color>
     <color name="fab_color">#FFEB3B</color>
     <color name="texts_color">#ffffff</color>
+    <color name="photo_item_background">#ffffff</color>
+
+    <color name="black_transparent">#B5000000</color>
+
 </resources>
