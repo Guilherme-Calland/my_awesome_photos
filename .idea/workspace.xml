@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0437d6d-c8d0-475a-be20-86cc75f13d11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/adapter/PhotoAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_karumi_dexter_6_2_2_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -21,18 +21,23 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/adapters/PhotoAdapter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/fragments/GalleryFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/fragments/GalleryFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="LMX420SSQ8EMYHZPUK" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -172,14 +177,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1846" y="275" width="950" height="537" key="#PSD" timestamp="1605696793313">
+    <state x="1846" y="275" width="950" height="537" key="#PSD" timestamp="1605873546561">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1846" y="275" width="950" height="537" key="#PSD/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605696793313" />
-    <state x="2100" y="259" width="442" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1605810343411">
+    <state x="1846" y="275" width="950" height="537" key="#PSD/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605873546561" />
+    <state x="2100" y="259" width="442" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1605874421199">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2100" y="259" width="442" height="569" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605810343411" />
+    <state x="2100" y="259" width="442" height="569" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605874421199" />
     <state x="1476" y="467" width="1699" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1605808164033">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -234,10 +239,10 @@
     </state>
     <state x="1982" y="367" key="com.intellij.ide.util.TipDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605803624185" />
     <state x="471" y="279" key="com.intellij.ide.util.TipDialog/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1605869466795" />
-    <state x="1852" y="283" width="927" height="528" key="psd.add.library.dependency.panel.dimension" timestamp="1605696792284">
+    <state x="1852" y="283" width="927" height="528" key="psd.add.library.dependency.panel.dimension" timestamp="1605873540031">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1852" y="283" width="927" height="528" key="psd.add.library.dependency.panel.dimension/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605696792284" />
+    <state x="1852" y="283" width="927" height="528" key="psd.add.library.dependency.panel.dimension/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605873540031" />
     <state x="371" y="174" key="run.anything.popup" timestamp="1605807643138">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
