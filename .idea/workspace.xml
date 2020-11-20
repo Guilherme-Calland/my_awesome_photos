@@ -10,15 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0437d6d-c8d0-475a-be20-86cc75f13d11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/general/G.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/screens/LocationScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/screens/MapScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/screens/PhotoInfoScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mapa_sample_com_1_lugar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mapa_sample_com_varios_lugares.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_location_screen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map_screen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/photo_info_screen.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/adapter/PhotoAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -29,23 +21,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/screens/HomeScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/adapters/PhotoAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/adapters/PhotoAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home_screen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/grid_layout_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/grid_layout_list_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/adapters/PhotoAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/fragments/GalleryFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/fragments/GalleryFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="LMX420SSQ8EMYHZPUK" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -61,10 +48,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
+        <option value="resourceFile" />
+        <option value="navigationResourceFile" />
         <option value="Kotlin File" />
         <option value="layoutResourceFile" />
-        <option value="resourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -77,9 +65,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ResourceManagerPrefKey.ResourceType" value="NAVIGATION" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Navigation" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -88,17 +77,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.guilhermecallandprojects.myawesomephotos" />
       <recent name="com.guilhermecallandprojects.myawesomephotos.screens" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <key name="android.template.619050450">
+      <recent name="com.guilhermecallandprojects.myawesomephotos.screens" />
     </key>
     <key name="android.template.-626692001">
       <recent name="com.guilhermecallandprojects.myawesomephotos.screens" />
       <recent name="com.guilhermecallandprojects.myawesomephotos" />
     </key>
-    <key name="android.template.619050450">
-      <recent name="com.guilhermecallandprojects.myawesomephotos.screens" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/fragments" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.guilhermecallandprojects.myawesomephotos" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
   <component name="RunManager">
@@ -179,53 +176,71 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1846" y="275" width="950" height="537" key="#PSD/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605696793313" />
-    <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605727807378">
+    <state x="2100" y="259" width="442" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1605810343411">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605727807378" />
-    <state x="1994" y="181" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1605704555737">
+    <state x="2100" y="259" width="442" height="569" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605810343411" />
+    <state x="1476" y="467" width="1699" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1605808164033">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1994" y="181" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605704555737" />
-    <state x="1909" y="298" width="824" height="491" key="AndroidCreateResourceFileDialog" timestamp="1605734082323">
+    <state x="1476" y="467" width="1699" height="152" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605808164033" />
+    <state x="2012" y="421" width="628" height="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1605808166225">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1909" y="298" width="824" height="491" key="AndroidCreateResourceFileDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605734082323" />
+    <state x="2012" y="421" width="628" height="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605808166225" />
+    <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605803954622">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605803954622" />
+    <state x="1994" y="181" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1605798127546">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1994" y="181" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605798127546" />
+    <state x="1909" y="298" width="824" height="491" key="AndroidCreateResourceFileDialog" timestamp="1605808390817">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1909" y="298" width="824" height="491" key="AndroidCreateResourceFileDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605808390817" />
     <state x="2175" y="355" width="302" height="377" key="AndroidCreateXmlResourceDialog" timestamp="1605708288615">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2175" y="355" width="302" height="377" key="AndroidCreateXmlResourceDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605708288615" />
-    <state x="2109" y="298" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605712771840">
+    <state x="558" y="231" width="374" height="337" key="FileChooserDialogImpl" timestamp="1605869633368">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="2109" y="298" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605808887558" />
+    <state x="558" y="231" width="374" height="337" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1605869633368" />
+    <state width="1874" height="207" key="GridCell.Tab.0.bottom" timestamp="1605822746087">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2109" y="298" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605712771840" />
-    <state width="1874" height="208" key="GridCell.Tab.0.bottom" timestamp="1605788257936">
+    <state width="1874" height="207" key="GridCell.Tab.0.bottom/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605822746087" />
+    <state width="1874" height="207" key="GridCell.Tab.0.center" timestamp="1605822746087">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="208" key="GridCell.Tab.0.bottom/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605788257936" />
-    <state width="1874" height="208" key="GridCell.Tab.0.center" timestamp="1605788257935">
+    <state width="1874" height="207" key="GridCell.Tab.0.center/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605822746087" />
+    <state width="1874" height="207" key="GridCell.Tab.0.left" timestamp="1605822746083">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="208" key="GridCell.Tab.0.center/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605788257935" />
-    <state width="1874" height="208" key="GridCell.Tab.0.left" timestamp="1605788257935">
+    <state width="1874" height="207" key="GridCell.Tab.0.left/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605822746083" />
+    <state width="1874" height="207" key="GridCell.Tab.0.right" timestamp="1605822746087">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="208" key="GridCell.Tab.0.left/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605788257935" />
-    <state width="1874" height="208" key="GridCell.Tab.0.right" timestamp="1605788257935">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="208" key="GridCell.Tab.0.right/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605788257935" />
+    <state width="1874" height="207" key="GridCell.Tab.0.right/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605822746087" />
     <state x="1815" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1605712213644">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="175" width="1022" height="737" key="SettingsEditor/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605712213644" />
-    <state x="1982" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1605787990516">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="471" y="279" key="com.intellij.ide.util.TipDialog" timestamp="1605869466795">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
-    <state x="1982" y="367" key="com.intellij.ide.util.TipDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605787990516" />
+    <state x="1982" y="367" key="com.intellij.ide.util.TipDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605803624185" />
+    <state x="471" y="279" key="com.intellij.ide.util.TipDialog/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1605869466795" />
     <state x="1852" y="283" width="927" height="528" key="psd.add.library.dependency.panel.dimension" timestamp="1605696792284">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1852" y="283" width="927" height="528" key="psd.add.library.dependency.panel.dimension/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605696792284" />
+    <state x="371" y="174" key="run.anything.popup" timestamp="1605807643138">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="371" y="174" key="run.anything.popup/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1605807643138" />
   </component>
 </project>

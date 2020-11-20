@@ -23,8 +23,8 @@
             android:layout_height="90dp"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="5dp"
-            android:src="@drawable/image1"
-        />
+            android:src="@drawable/bensonwillems"
+            />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

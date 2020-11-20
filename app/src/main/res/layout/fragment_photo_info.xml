@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PhotoInfoFragment"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:padding="@dimen/padding_small"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/bensonwillems"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/padding_size"
+        android:paddingTop="@dimen/padding_big"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When: ( time )"
+            android:textColor="@color/texts_color"
+            android:textSize="@dimen/text_size_big"
+            android:layout_marginBottom="@dimen/padding_small"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Where: ( location )"
+            android:textColor="@color/texts_color"
+            android:textSize="@dimen/text_size_big"
+            android:layout_marginBottom="@dimen/padding_small"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fab_color"
+            android:textColor="@color/black_transparent"
+            android:text="Show Location"
+            android:gravity="center_horizontal"
+            android:paddingVertical="32sp"
+            android:textSize="@dimen/text_size_big"
+            android:layout_marginTop="@dimen/padding_size"
+            android:layout_marginBottom="@dimen/padding_size"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
