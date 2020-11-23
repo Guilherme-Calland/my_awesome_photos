@@ -23,7 +23,7 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
 
     override fun onBindViewHolder(holder: PhotoHolder, position: Int) {
         var photo: Photo = arrayList.get(position)
-        holder.image.setImageResource(photo.image!!)
+//        holder.image.setImageResource(photo.image!!)
         holder.image.setOnClickListener{
             showShortToast(context, "you pressed this")
         }

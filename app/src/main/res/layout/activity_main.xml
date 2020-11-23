@@ -62,15 +62,6 @@
                 android:textColor="@color/texts_color"
                 android:textSize="@dimen/text_size_big" />
 
-            <ImageView
-                android:id="@+id/iv_test"
-                android:layout_width="100sp"
-                android:layout_height="120sp"
-                app:srcCompat="@drawable/ic_launcher_foreground"
-                tools:ignore="VectorDrawableCompat"
-                android:scaleType="centerCrop"
-                />
-
 
         </LinearLayout>
 

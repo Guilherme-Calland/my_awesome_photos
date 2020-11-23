@@ -1,7 +1,6 @@
 package com.guilhermecallandprojects.myawesomephotos
 
 import android.Manifest
-import android.Manifest.permission.CAMERA
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -16,9 +15,11 @@ import android.provider.Settings
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import com.guilhermecallandprojects.myawesomephotos.database.DBHelper
 import com.guilhermecallandprojects.myawesomephotos.fragments.GalleryFragment
 import com.guilhermecallandprojects.myawesomephotos.fragments.MapFragment
 import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
+import com.guilhermecallandprojects.myawesomephotos.model.Photo
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -36,6 +37,9 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private val manager = supportFragmentManager
+    private var saveImageToInternalStorage : Uri? = null
+    private var mLatitude : Double = 0.0
+    private var mLongitude : Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         }
         map_btn.setOnClickListener {
             showFragment(MapFragment())
+
         }
         fab_btn.setOnClickListener {
             askForPermissions()
@@ -60,11 +65,47 @@ class MainActivity : AppCompatActivity() {
         if(resultCode == Activity.RESULT_OK){
             if(requestCode == CAMERA){
                 val photoTaken : Bitmap = data!!.extras!!.get("data") as Bitmap
-                val savedImage = saveImageToInternalStorage(photoTaken)
-                Log.e("Saved Image: ", "Path :: ${savedImage}")
-                iv_test.setImageBitmap(photoTaken)
+
+                saveImageToInternalStorage = saveImageToInternalStorage(photoTaken)
+
+                addPhotoToDatabase()
+
+                Log.e("Saved Image: ", "Path :: ${saveImageToInternalStorage}")
             }
         }
+    }
+
+    private fun addPhotoToDatabase() {
+        val date = getCurrentDate()
+        val awesomePhoto = Photo(
+            0,
+            saveImageToInternalStorage.toString(),
+            date,
+            "",
+            mLatitude,
+            mLongitude
+        )
+        val database = DBHelper(this)
+        val addAwesosomePhoto = database.addAwesomePhoto(awesomePhoto)
+
+        //function return a long, so if it returns > 0, it means no errors ocurred
+        if(addAwesosomePhoto > 0){
+            showShortToast(this, "The photo details were added sucessfully")
+        } else {
+            showShortToast(this, "Failed to save photo")
+        }
+    }
+
+    private fun getCurrentDate(): String {
+        val c = Calendar.getInstance()
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+        val hour = c.get(Calendar.HOUR_OF_DAY)
+        val minute = c.get(Calendar.MINUTE)
+
+        val date = "$day/$month/$year  $hour : $minute"
+        return date
     }
 
     private fun askForPermissions() {
@@ -137,4 +178,6 @@ class MainActivity : AppCompatActivity() {
         private const val CAMERA = 0
         private const val IMAGE_DIRECTORY = "myAwesomePhotosImages"
     }
+
+
 }
