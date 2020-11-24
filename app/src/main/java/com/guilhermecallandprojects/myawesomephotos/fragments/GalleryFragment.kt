@@ -1,6 +1,7 @@
 package com.guilhermecallandprojects.myawesomephotos.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.guilhermecallandprojects.myawesomephotos.MainActivity
 import com.guilhermecallandprojects.myawesomephotos.R
 import com.guilhermecallandprojects.myawesomephotos.adapter.PhotoAdapter
+import com.guilhermecallandprojects.myawesomephotos.database.DBHelper
 import com.guilhermecallandprojects.myawesomephotos.model.Photo
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.fragment_gallery.*
@@ -46,46 +48,24 @@ class GalleryFragment : Fragment() {
         var view = inflater.inflate(R.layout.fragment_gallery, container, false)
 
         gridLayoutManager = GridLayoutManager(inflater.context, 3, LinearLayoutManager.VERTICAL, false)
-
         recyclerView = view.findViewById(R.id.my_recycler_view);
         recyclerView?.layoutManager = gridLayoutManager
         recyclerView?.setHasFixedSize(true)
         photos = ArrayList()
-        photos = setDataInList()
+        photos = readHappyPlacesFromDatabase()
         photoAdapter = PhotoAdapter(inflater.context, photos!!)
         recyclerView?.adapter = photoAdapter
-
-
 
         return view
     }
 
 
-    private fun setDataInList() : ArrayList<Photo>{
-        val items:ArrayList<Photo> = ArrayList()
 
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
-//        items.add(Photo(R.drawable.bensonwillems))
 
-        return items
+    private fun readHappyPlacesFromDatabase() : ArrayList<Photo>{
+        val dbHelper = DBHelper(context)
+        val awesomePhotosList : java.util.ArrayList<Photo> = dbHelper.getAwesomePhotosList()
+        return awesomePhotosList
     }
 
 

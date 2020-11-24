@@ -1,6 +1,8 @@
 package com.guilhermecallandprojects.myawesomephotos.adapter
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.guilhermecallandprojects.myawesomephotos.R
 import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
 import com.guilhermecallandprojects.myawesomephotos.model.Photo
+import java.io.File
 
 class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>(){
 
@@ -23,7 +26,16 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
 
     override fun onBindViewHolder(holder: PhotoHolder, position: Int) {
         var photo: Photo = arrayList.get(position)
-//        holder.image.setImageResource(photo.image!!)
+
+        val imgFile = File(photo.image)
+
+        if(imgFile.exists()){
+            val myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath())
+            holder.image.setImageBitmap(myBitmap)
+        }else {
+            showShortToast(context,"Some Image files where not found")
+        }
+//        holder.image.setImage(photo.image!!)
         holder.image.setOnClickListener{
             showShortToast(context, "you pressed this")
         }

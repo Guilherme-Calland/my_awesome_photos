@@ -2,11 +2,13 @@ package com.guilhermecallandprojects.myawesomephotos.database
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
 import com.guilhermecallandprojects.myawesomephotos.model.Photo
 
-class DBHelper(context: Context) :
+class DBHelper(context: Context?) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
 {
     companion object{
@@ -53,6 +55,36 @@ class DBHelper(context: Context) :
         db.close()
         return result;
     }
+
+    fun getAwesomePhotosList():ArrayList<Photo>{
+        val awesomePhotosList = ArrayList<Photo>()
+        val selectQuery = "SELECT * FROM $TABLE_AWESOME_PHOTOS"
+        val db = this.readableDatabase
+
+        try{
+            val cursor : Cursor = db.rawQuery(selectQuery, null)
+            if(cursor.moveToFirst()){
+                do{
+                    val photo = Photo(
+                        cursor.getInt(cursor.getColumnIndex(KEY_ID)),
+                        cursor.getString(cursor.getColumnIndex(KEY_IMAGE)),
+                        cursor.getString(cursor.getColumnIndex(KEY_DATE)),
+                        cursor.getString(cursor.getColumnIndex(KEY_LOCATION)),
+                        cursor.getDouble(cursor.getColumnIndex(KEY_LATITUDE)),
+                        cursor.getDouble(cursor.getColumnIndex(KEY_LONGITUDE))
+                    )
+                    awesomePhotosList.add(photo)
+                } while (cursor.moveToNext())
+            }
+            cursor.close()
+        }catch(e: SQLiteException){
+            db.execSQL(selectQuery)
+            return ArrayList()
+        }
+
+        return awesomePhotosList
+    }
+
 }
 
 
