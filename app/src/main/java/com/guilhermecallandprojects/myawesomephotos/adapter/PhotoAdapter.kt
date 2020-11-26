@@ -3,6 +3,7 @@ package com.guilhermecallandprojects.myawesomephotos.adapter
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.Matrix
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,14 +32,31 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
 
         if(imgFile.exists()){
             val myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath())
-            holder.image.setImageBitmap(myBitmap)
+            val rotationMatrix: Matrix = Matrix()
+            rotationMatrix.setRotate(-90.0f)
+            val rotatedBitmap = rotateBitmap(myBitmap, rotationMatrix)
+            holder.image.setImageBitmap(rotatedBitmap)
         }else {
             showShortToast(context,"Some Image files where not found")
         }
-//        holder.image.setImage(photo.image!!)
         holder.image.setOnClickListener{
             showShortToast(context, "you pressed this")
         }
+    }
+
+    private fun rotateBitmap(
+        myBitmap: Bitmap,
+        rotationMatrix: Matrix
+    ): Bitmap? {
+        return Bitmap.createBitmap(
+            myBitmap,
+            0,
+            0,
+            myBitmap.getWidth(),
+            myBitmap.getHeight(),
+            rotationMatrix,
+            true
+        )
     }
 
     class PhotoHolder(photoView: View) : RecyclerView.ViewHolder(photoView){
