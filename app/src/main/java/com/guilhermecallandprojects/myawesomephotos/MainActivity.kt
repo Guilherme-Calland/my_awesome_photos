@@ -14,10 +14,11 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.guilhermecallandprojects.myawesomephotos.adapter.PhotoAdapter
 import com.guilhermecallandprojects.myawesomephotos.database.DBHelper
-import com.guilhermecallandprojects.myawesomephotos.fragments.GalleryFragment
-import com.guilhermecallandprojects.myawesomephotos.fragments.MapFragment
 import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
 import com.guilhermecallandprojects.myawesomephotos.model.Photo
 import com.karumi.dexter.Dexter
@@ -32,32 +33,35 @@ import java.io.IOException
 import java.io.OutputStream
 import java.util.*
 
-//TODO: make the app navigate through diferent screens
-//TODO: (opcional) make map/ gallera buttuns light up when are selected
-
 class MainActivity : AppCompatActivity() {
-    private val manager = supportFragmentManager
     private var saveImageToInternalStorage : Uri? = null
     private var mLatitude : Double = 0.0
     private var mLongitude : Double = 0.0
+    private var recyclerView: RecyclerView? = null
+    private var gridLayoutManager: GridLayoutManager?= null
+    private var photos: ArrayList<Photo> ?= null
+    private var photoAdapter: PhotoAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setButtons()
-    }
 
-    private fun setButtons() {
-        gallery_btn.setOnClickListener {
-            showFragment(GalleryFragment())
-        }
-        map_btn.setOnClickListener {
-            showFragment(MapFragment())
+        loadPhotosToGrid()
 
-        }
-        fab_btn.setOnClickListener {
+        fab_btn.setOnClickListener{
             askForPermissions()
         }
+    }
+
+    private fun loadPhotosToGrid() {
+        recyclerView = findViewById(R.id.recycler_view)
+        gridLayoutManager = GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL, false)
+        recyclerView?.layoutManager = gridLayoutManager
+        recyclerView?.setHasFixedSize(true)
+        photos = ArrayList()
+        photos = readPhotosFromDatabase()
+        photoAdapter = PhotoAdapter(this, photos!!)
+        recyclerView?.adapter = photoAdapter
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -94,6 +98,14 @@ class MainActivity : AppCompatActivity() {
         } else {
             showShortToast(this, "Failed to save photo")
         }
+
+        loadPhotosToGrid()
+    }
+
+    private fun readPhotosFromDatabase() : ArrayList<Photo>{
+        val dbHelper = DBHelper(this)
+        val awesomePhotosList : java.util.ArrayList<Photo> = dbHelper.getAwesomePhotosList()
+        return awesomePhotosList
     }
 
     private fun getCurrentDate(): String {
@@ -146,13 +158,6 @@ class MainActivity : AppCompatActivity() {
             }.setNegativeButton("Cancel"){dialog, _ ->
                 dialog.dismiss()
             }.show()
-    }
-
-    private fun showFragment(fragment: Fragment) {
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.fragment_holder,fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
     }
 
     private fun saveImageToInternalStorage(bitmap: Bitmap) : Uri{

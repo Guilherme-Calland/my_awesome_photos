@@ -47,14 +47,7 @@ class GalleryFragment : Fragment() {
 
         var view = inflater.inflate(R.layout.fragment_gallery, container, false)
 
-        gridLayoutManager = GridLayoutManager(inflater.context, 3, LinearLayoutManager.VERTICAL, false)
-        recyclerView = view.findViewById(R.id.my_recycler_view);
-        recyclerView?.layoutManager = gridLayoutManager
-        recyclerView?.setHasFixedSize(true)
-        photos = ArrayList()
-        photos = readHappyPlacesFromDatabase()
-        photoAdapter = PhotoAdapter(inflater.context, photos!!)
-        recyclerView?.adapter = photoAdapter
+
 
         return view
     }
@@ -62,11 +55,7 @@ class GalleryFragment : Fragment() {
 
 
 
-    private fun readHappyPlacesFromDatabase() : ArrayList<Photo>{
-        val dbHelper = DBHelper(context)
-        val awesomePhotosList : java.util.ArrayList<Photo> = dbHelper.getAwesomePhotosList()
-        return awesomePhotosList
-    }
+
 
 
 }
