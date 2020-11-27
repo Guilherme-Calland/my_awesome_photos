@@ -1,4 +1,4 @@
-package com.guilhermecallandprojects.myawesomephotos
+package com.guilhermecallandprojects.myawesomephotos.activities
 
 import android.Manifest
 import android.app.Activity
@@ -17,6 +17,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.guilhermecallandprojects.myawesomephotos.R
 import com.guilhermecallandprojects.myawesomephotos.adapter.PhotoAdapter
 import com.guilhermecallandprojects.myawesomephotos.database.DBHelper
 import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
@@ -62,6 +63,14 @@ class MainActivity : AppCompatActivity() {
         photos = readPhotosFromDatabase()
         photoAdapter = PhotoAdapter(this, photos!!)
         recyclerView?.adapter = photoAdapter
+
+        photoAdapter!!.setOnClickListener(object: PhotoAdapter.OnClickListener{
+            override fun onClick(position: Int, model: Photo) {
+//                val intent = Intent(this@MainActivity, PhotoInfoActivity::class.java)
+//                startActivity(intent)
+                showShortToast(this@MainActivity, "testing ${model.date}")
+            }
+        })
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -129,7 +138,9 @@ class MainActivity : AppCompatActivity() {
                     showShortToast(this@MainActivity, "Camera usage is granted!")
 
                     val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-                    startActivityForResult(cameraIntent, CAMERA)
+                    startActivityForResult(cameraIntent,
+                        CAMERA
+                    )
                 }
             }
             override fun onPermissionRationaleShouldBeShown(

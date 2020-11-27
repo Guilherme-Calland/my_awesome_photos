@@ -16,6 +16,8 @@ import java.io.File
 
 class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>(){
 
+    private var onClickListener: OnClickListener? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoHolder {
         val photoHolder = LayoutInflater.from(parent.context).inflate(R.layout.grid_layout_list_item, parent, false)
         return PhotoHolder(photoHolder)
@@ -26,7 +28,7 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
     }
 
     override fun onBindViewHolder(holder: PhotoHolder, position: Int) {
-        var photo: Photo = arrayList.get(position)
+        val photo: Photo = arrayList.get(position)
 
         val imgFile = File(photo.image)
 
@@ -40,9 +42,11 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
             showShortToast(context,"Some Image files where not found")
         }
         holder.image.setOnClickListener{
-            showShortToast(context, "you pressed this")
+            onClickListener!!.onClick(position, photo)
         }
     }
+
+
 
     private fun rotateBitmap(
         myBitmap: Bitmap,
@@ -57,6 +61,14 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
             rotationMatrix,
             true
         )
+    }
+
+    fun setOnClickListener(onClickListener: OnClickListener){
+        this.onClickListener = onClickListener
+    }
+
+    interface OnClickListener {
+        fun onClick(position: Int, model: Photo)
     }
 
     class PhotoHolder(photoView: View) : RecyclerView.ViewHolder(photoView){
