@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         fab_btn.setOnClickListener{
             askForPermissions()
         }
+
+        setPhotosClickListeners()
     }
 
     private fun loadPhotosToGrid() {
@@ -64,14 +66,26 @@ class MainActivity : AppCompatActivity() {
         photoAdapter = PhotoAdapter(this, photos!!)
         recyclerView?.adapter = photoAdapter
 
-        photoAdapter!!.setOnClickListener(object: PhotoAdapter.OnClickListener{
+    }
+
+    private fun setPhotosClickListeners() {
+
+        photoAdapter!!.setOnLongClickListener(object: PhotoAdapter.OnLongClickListener{
+            override fun onLongClick(position: Int) {
+                showShortToast(applicationContext, "testing Long Press in Main Activity")
+            }
+        })
+
+        photoAdapter!!.setOnClickListener(object : PhotoAdapter.OnClickListener {
             override fun onClick(position: Int, model: Photo) {
                 val intent = Intent(this@MainActivity, PhotoInfoActivity::class.java)
                 intent.putExtra(EXTRA_PLACE_DETAILS, model)
                 startActivity(intent)
-//                showShortToast(this@MainActivity, "testing ${model.date}")
+    //                showShortToast(this@MainActivity, "testing ${model.date}")
             }
         })
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -190,6 +204,8 @@ class MainActivity : AppCompatActivity() {
 
         return Uri.parse(file.absolutePath)
     }
+
+
 
     companion object {
         private const val CAMERA = 0

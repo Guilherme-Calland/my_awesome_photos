@@ -1,9 +1,7 @@
 package com.guilhermecallandprojects.myawesomephotos.adapter
 
 import android.content.Context
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.Matrix
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +16,7 @@ import java.io.File
 class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>(){
 
     private var onClickListener: OnClickListener? = null
+    private var onLongClickListener: OnLongClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoHolder {
         val photoHolder = LayoutInflater.from(parent.context).inflate(R.layout.grid_layout_list_item, parent, false)
@@ -43,14 +42,26 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
         holder.image.setOnClickListener{
             onClickListener!!.onClick(position, photo)
         }
+        holder.image.setOnLongClickListener{
+            onLongClickListener!!.onLongClick(position)
+            true
+        }
     }
 
     fun setOnClickListener(onClickListener: OnClickListener){
         this.onClickListener = onClickListener
     }
 
+    fun setOnLongClickListener(onLongClickListener: OnLongClickListener){
+        this.onLongClickListener = onLongClickListener
+    }
+
     interface OnClickListener {
         fun onClick(position: Int, model: Photo)
+    }
+
+    interface OnLongClickListener {
+        fun onLongClick(position: Int)
     }
 
     class PhotoHolder(photoView: View) : RecyclerView.ViewHolder(photoView){

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.guilhermecallandprojects.myawesomephotos.R
 import com.guilhermecallandprojects.myawesomephotos.general.rotateBitmap
+import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
 import com.guilhermecallandprojects.myawesomephotos.model.Photo
 import kotlinx.android.synthetic.main.activity_photo_info.*
 import java.io.File
@@ -27,5 +28,6 @@ class PhotoInfoActivity : AppCompatActivity() {
             iv_photo.setImageBitmap(rotatedBitmap)
             iv_date.text = awesomePhoto.date
         }
+
     }
 }
