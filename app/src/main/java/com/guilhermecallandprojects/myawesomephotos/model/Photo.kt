@@ -1,5 +1,7 @@
 package com.guilhermecallandprojects.myawesomephotos.model
 
+import java.io.Serializable
+
 data class Photo(
     val id: Int,
     val image: String?,
@@ -7,4 +9,4 @@ data class Photo(
     val location: String,
     val latitude: Double,
     val longitude: Double
-)
+): Serializable

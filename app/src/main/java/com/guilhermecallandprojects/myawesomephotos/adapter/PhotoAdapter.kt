@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.guilhermecallandprojects.myawesomephotos.R
+import com.guilhermecallandprojects.myawesomephotos.general.rotateBitmap
 import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
 import com.guilhermecallandprojects.myawesomephotos.model.Photo
 import java.io.File
@@ -34,9 +35,7 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
 
         if(imgFile.exists()){
             val myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath())
-            val rotationMatrix: Matrix = Matrix()
-            rotationMatrix.setRotate(-90.0f)
-            val rotatedBitmap = rotateBitmap(myBitmap, rotationMatrix)
+            val rotatedBitmap = rotateBitmap(myBitmap)
             holder.image.setImageBitmap(rotatedBitmap)
         }else {
             showShortToast(context,"Some Image files where not found")
@@ -44,23 +43,6 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
         holder.image.setOnClickListener{
             onClickListener!!.onClick(position, photo)
         }
-    }
-
-
-
-    private fun rotateBitmap(
-        myBitmap: Bitmap,
-        rotationMatrix: Matrix
-    ): Bitmap? {
-        return Bitmap.createBitmap(
-            myBitmap,
-            0,
-            0,
-            myBitmap.getWidth(),
-            myBitmap.getHeight(),
-            rotationMatrix,
-            true
-        )
     }
 
     fun setOnClickListener(onClickListener: OnClickListener){

@@ -66,9 +66,10 @@ class MainActivity : AppCompatActivity() {
 
         photoAdapter!!.setOnClickListener(object: PhotoAdapter.OnClickListener{
             override fun onClick(position: Int, model: Photo) {
-//                val intent = Intent(this@MainActivity, PhotoInfoActivity::class.java)
-//                startActivity(intent)
-                showShortToast(this@MainActivity, "testing ${model.date}")
+                val intent = Intent(this@MainActivity, PhotoInfoActivity::class.java)
+                intent.putExtra(EXTRA_PLACE_DETAILS, model)
+                startActivity(intent)
+//                showShortToast(this@MainActivity, "testing ${model.date}")
             }
         })
     }
@@ -125,7 +126,7 @@ class MainActivity : AppCompatActivity() {
         val hour = c.get(Calendar.HOUR_OF_DAY)
         val minute = c.get(Calendar.MINUTE)
 
-        val date = "$day/$month/$year  $hour : $minute"
+        val date = "$day/$month/$year  $hour:$minute"
         return date
     }
 
@@ -193,6 +194,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val CAMERA = 0
         private const val IMAGE_DIRECTORY = "myAwesomePhotosImages"
+        var EXTRA_PLACE_DETAILS = "extra_place_details"
     }
 
 
