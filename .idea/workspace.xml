@@ -11,18 +11,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0437d6d-c8d0-475a-be20-86cc75f13d11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/PhotoInfoActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/PhotoInfoActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/adapter/PhotoAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/adapter/PhotoAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/database/DBHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/database/DBHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/model/Photo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/model/AwesomePhoto.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="LMX420SSQ8EMYHZPUK" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_4_API_23" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -183,6 +193,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2012" y="421" width="628" height="244" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605808166225" />
+    <state x="2559" y="0" width="717" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606599940043">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2559" y="0" width="717" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606599940043" />
     <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606503765638">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -199,10 +213,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2175" y="355" width="302" height="377" key="AndroidCreateXmlResourceDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605708288615" />
-    <state x="2109" y="298" width="374" height="337" key="FileChooserDialogImpl" timestamp="1606590284517">
+    <state x="2109" y="298" width="374" height="337" key="FileChooserDialogImpl" timestamp="1606599611929">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2109" y="298" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606590284517" />
+    <state x="2109" y="298" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606599611929" />
     <state x="558" y="231" width="374" height="337" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1605869633368" />
     <state width="1874" height="351" key="GridCell.Tab.0.bottom" timestamp="1606145838562">
       <screen x="1366" y="0" width="1920" height="1080" />
@@ -224,10 +238,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="175" width="1022" height="737" key="SettingsEditor/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1605712213644" />
-    <state x="1982" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1606595995405">
+    <state x="1982" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1606639040618">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1982" y="367" key="com.intellij.ide.util.TipDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606595995405" />
+    <state x="1982" y="367" key="com.intellij.ide.util.TipDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606639040618" />
     <state x="471" y="279" key="com.intellij.ide.util.TipDialog/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1605869466795" />
     <state x="1852" y="283" width="927" height="528" key="psd.add.library.dependency.panel.dimension" timestamp="1605873540031">
       <screen x="1366" y="0" width="1920" height="1080" />

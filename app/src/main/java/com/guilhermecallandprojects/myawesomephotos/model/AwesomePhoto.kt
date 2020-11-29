@@ -2,7 +2,7 @@ package com.guilhermecallandprojects.myawesomephotos.model
 
 import java.io.Serializable
 
-data class Photo(
+data class AwesomePhoto(
     val id: Int,
     val image: String?,
     val date: String,

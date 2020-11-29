@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.guilhermecallandprojects.myawesomephotos.R
 import com.guilhermecallandprojects.myawesomephotos.general.rotateBitmap
 import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
-import com.guilhermecallandprojects.myawesomephotos.model.Photo
+import com.guilhermecallandprojects.myawesomephotos.model.AwesomePhoto
 import java.io.File
 
-class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>(){
+class PhotoAdapter(var context: Context, var arrayList: ArrayList<AwesomePhoto>) : RecyclerView.Adapter<PhotoAdapter.PhotoHolder>(){
 
     private var onClickListener: OnClickListener? = null
     private var onLongClickListener: OnLongClickListener? = null
@@ -28,9 +28,9 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
     }
 
     override fun onBindViewHolder(holder: PhotoHolder, position: Int) {
-        val photo: Photo = arrayList.get(position)
+        val awesomePhoto: AwesomePhoto = arrayList.get(position)
 
-        val imgFile = File(photo.image)
+        val imgFile = File(awesomePhoto.image)
 
         if(imgFile.exists()){
             val myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath())
@@ -40,10 +40,10 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
             showShortToast(context,"Some Image files where not found")
         }
         holder.image.setOnClickListener{
-            onClickListener!!.onClick(position, photo)
+            onClickListener!!.onClick(position, awesomePhoto)
         }
         holder.image.setOnLongClickListener{
-            onLongClickListener!!.onLongClick(position)
+            onLongClickListener!!.onLongClick(position, awesomePhoto)
             true
         }
     }
@@ -57,11 +57,11 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<Photo>) : Recy
     }
 
     interface OnClickListener {
-        fun onClick(position: Int, model: Photo)
+        fun onClick(position: Int, model: AwesomePhoto)
     }
 
     interface OnLongClickListener {
-        fun onLongClick(position: Int)
+        fun onLongClick(position: Int, model: AwesomePhoto)
     }
 
     class PhotoHolder(photoView: View) : RecyclerView.ViewHolder(photoView){

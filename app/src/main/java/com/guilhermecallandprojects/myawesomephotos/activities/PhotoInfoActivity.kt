@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.guilhermecallandprojects.myawesomephotos.R
 import com.guilhermecallandprojects.myawesomephotos.general.rotateBitmap
-import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
-import com.guilhermecallandprojects.myawesomephotos.model.Photo
+import com.guilhermecallandprojects.myawesomephotos.model.AwesomePhoto
 import kotlinx.android.synthetic.main.activity_photo_info.*
 import java.io.File
 
@@ -15,18 +14,18 @@ class PhotoInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_photo_info)
 
-        var awesomePhoto : Photo? = null
+        var awesomeAwesomePhoto : AwesomePhoto? = null
 
         if(intent.hasExtra(MainActivity.EXTRA_PLACE_DETAILS)){
-            awesomePhoto = intent.getSerializableExtra(MainActivity.EXTRA_PLACE_DETAILS) as Photo
+            awesomeAwesomePhoto = intent.getSerializableExtra(MainActivity.EXTRA_PLACE_DETAILS) as AwesomePhoto
         }
 
-        if(awesomePhoto != null){
-            val imgFile = File(awesomePhoto.image)
+        if(awesomeAwesomePhoto != null){
+            val imgFile = File(awesomeAwesomePhoto.image)
             val bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath())
             val rotatedBitmap = rotateBitmap(bitmap)
             iv_photo.setImageBitmap(rotatedBitmap)
-            iv_date.text = awesomePhoto.date
+            iv_date.text = awesomeAwesomePhoto.date
         }
 
     }

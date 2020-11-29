@@ -21,7 +21,7 @@ import com.guilhermecallandprojects.myawesomephotos.R
 import com.guilhermecallandprojects.myawesomephotos.adapter.PhotoAdapter
 import com.guilhermecallandprojects.myawesomephotos.database.DBHelper
 import com.guilhermecallandprojects.myawesomephotos.general.showShortToast
-import com.guilhermecallandprojects.myawesomephotos.model.Photo
+import com.guilhermecallandprojects.myawesomephotos.model.AwesomePhoto
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -40,14 +40,14 @@ class MainActivity : AppCompatActivity() {
     private var mLongitude : Double = 0.0
     private var recyclerView: RecyclerView? = null
     private var gridLayoutManager: GridLayoutManager?= null
-    private var photos: ArrayList<Photo> ?= null
+    private var awesomePhotos: ArrayList<AwesomePhoto> ?= null
     private var photoAdapter: PhotoAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadPhotosToGrid()
+        loadPhotosToGridFromDatabase()
 
         fab_btn.setOnClickListener{
             askForPermissions()
@@ -56,37 +56,34 @@ class MainActivity : AppCompatActivity() {
         setPhotosClickListeners()
     }
 
-    private fun loadPhotosToGrid() {
+    private fun loadPhotosToGridFromDatabase() {
         recyclerView = findViewById(R.id.recycler_view)
         gridLayoutManager = GridLayoutManager(this, 3, LinearLayoutManager.VERTICAL, false)
         recyclerView?.layoutManager = gridLayoutManager
         recyclerView?.setHasFixedSize(true)
-        photos = ArrayList()
-        photos = readPhotosFromDatabase()
-        photoAdapter = PhotoAdapter(this, photos!!)
+        awesomePhotos = ArrayList()
+        awesomePhotos = readPhotosFromDatabase()
+        photoAdapter = PhotoAdapter(this, awesomePhotos!!)
         recyclerView?.adapter = photoAdapter
 
     }
 
     private fun setPhotosClickListeners() {
-
         photoAdapter!!.setOnLongClickListener(object: PhotoAdapter.OnLongClickListener{
-            override fun onLongClick(position: Int) {
-                showShortToast(applicationContext, "testing Long Press in Main Activity")
+            override fun onLongClick(position: Int, photo: AwesomePhoto) {
+                deletePhotoFromDatabase(photo)
             }
         })
-
         photoAdapter!!.setOnClickListener(object : PhotoAdapter.OnClickListener {
-            override fun onClick(position: Int, model: Photo) {
+            override fun onClick(position: Int, photo: AwesomePhoto) {
                 val intent = Intent(this@MainActivity, PhotoInfoActivity::class.java)
-                intent.putExtra(EXTRA_PLACE_DETAILS, model)
+                intent.putExtra(EXTRA_PLACE_DETAILS, photo)
                 startActivity(intent)
-    //                showShortToast(this@MainActivity, "testing ${model.date}")
             }
         })
-
-
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -105,7 +102,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun addPhotoToDatabase() {
         val date = getCurrentDate()
-        val awesomePhoto = Photo(
+        val awesomePhoto = AwesomePhoto(
             0,
             saveImageToInternalStorage.toString(),
             date,
@@ -122,14 +119,24 @@ class MainActivity : AppCompatActivity() {
         } else {
             showShortToast(this, "Failed to save photo")
         }
-
-        loadPhotosToGrid()
+        loadPhotosToGridFromDatabase()
     }
 
-    private fun readPhotosFromDatabase() : ArrayList<Photo>{
+    private fun readPhotosFromDatabase() : ArrayList<AwesomePhoto>{
         val dbHelper = DBHelper(this)
-        val awesomePhotosList : java.util.ArrayList<Photo> = dbHelper.getAwesomePhotosList()
+        val awesomePhotosList : java.util.ArrayList<AwesomePhoto> = dbHelper.getAwesomePhotosList()
         return awesomePhotosList
+    }
+
+    private fun deletePhotoFromDatabase(photo: AwesomePhoto) {
+        val database = DBHelper(this@MainActivity)
+        val wasDeleted = database.deleteAwesomePhoto(photo)
+        if (wasDeleted > 0) {
+            showShortToast(this@MainActivity, "Photo Deleted")
+        } else {
+            showShortToast(this@MainActivity, "Photo not deleted")
+        }
+        loadPhotosToGridFromDatabase()
     }
 
     private fun getCurrentDate(): String {
@@ -204,8 +211,6 @@ class MainActivity : AppCompatActivity() {
 
         return Uri.parse(file.absolutePath)
     }
-
-
 
     companion object {
         private const val CAMERA = 0

@@ -6,7 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
-import com.guilhermecallandprojects.myawesomephotos.model.Photo
+import com.guilhermecallandprojects.myawesomephotos.model.AwesomePhoto
 
 class DBHelper(context: Context?) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
@@ -15,7 +15,6 @@ class DBHelper(context: Context?) :
         private const val DATABASE_NAME = "my_Awesome_Photos_Database"
         private const val DATABASE_VERSION = 1
         private const val TABLE_AWESOME_PHOTOS = "awesome_Photos_Table"
-
         private const val KEY_ID = "_id"
         private const val KEY_IMAGE = "image"
         private const val KEY_DATE = "date"
@@ -40,15 +39,15 @@ class DBHelper(context: Context?) :
         onCreate(db)
     }
 
-    fun addAwesomePhoto(awesomePhoto: Photo) : Long {
+    fun addAwesomePhoto(awesomeAwesomePhoto: AwesomePhoto) : Long {
         val db = this.writableDatabase
 
         val contentValues = ContentValues()
-        contentValues.put(KEY_IMAGE, awesomePhoto.image)
-        contentValues.put(KEY_DATE, awesomePhoto.date)
-        contentValues.put(KEY_LOCATION, awesomePhoto.location)
-        contentValues.put(KEY_LATITUDE, awesomePhoto.latitude)
-        contentValues.put(KEY_LONGITUDE, awesomePhoto.longitude)
+        contentValues.put(KEY_IMAGE, awesomeAwesomePhoto.image)
+        contentValues.put(KEY_DATE, awesomeAwesomePhoto.date)
+        contentValues.put(KEY_LOCATION, awesomeAwesomePhoto.location)
+        contentValues.put(KEY_LATITUDE, awesomeAwesomePhoto.latitude)
+        contentValues.put(KEY_LONGITUDE, awesomeAwesomePhoto.longitude)
 
         val result = db.insert(TABLE_AWESOME_PHOTOS, null, contentValues)
 
@@ -56,8 +55,8 @@ class DBHelper(context: Context?) :
         return result;
     }
 
-    fun getAwesomePhotosList():ArrayList<Photo>{
-        val awesomePhotosList = ArrayList<Photo>()
+    fun getAwesomePhotosList():ArrayList<AwesomePhoto>{
+        val awesomePhotosList = ArrayList<AwesomePhoto>()
         val selectQuery = "SELECT * FROM $TABLE_AWESOME_PHOTOS"
         val db = this.readableDatabase
 
@@ -65,7 +64,7 @@ class DBHelper(context: Context?) :
             val cursor : Cursor = db.rawQuery(selectQuery, null)
             if(cursor.moveToFirst()){
                 do{
-                    val photo = Photo(
+                    val photo = AwesomePhoto(
                         cursor.getInt(cursor.getColumnIndex(KEY_ID)),
                         cursor.getString(cursor.getColumnIndex(KEY_IMAGE)),
                         cursor.getString(cursor.getColumnIndex(KEY_DATE)),
@@ -83,6 +82,13 @@ class DBHelper(context: Context?) :
         }
 
         return awesomePhotosList
+    }
+
+    fun deleteAwesomePhoto(awesomePhoto: AwesomePhoto): Int{
+        val database = this.writableDatabase
+        val success = database.delete(TABLE_AWESOME_PHOTOS, KEY_ID + "=" + awesomePhoto.id, null)
+        database.close()
+        return success
     }
 
 }
