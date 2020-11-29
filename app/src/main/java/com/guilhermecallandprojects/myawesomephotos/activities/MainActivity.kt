@@ -46,13 +46,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         loadPhotosToGridFromDatabase()
-
         fab_btn.setOnClickListener{
             askForPermissions()
         }
-
         setPhotosClickListeners()
     }
 
@@ -119,7 +116,10 @@ class MainActivity : AppCompatActivity() {
         } else {
             showShortToast(this, "Failed to save photo")
         }
-        loadPhotosToGridFromDatabase()
+//        loadPhotosToGridFromDatabase()
+        awesomePhotos!!.add(awesomePhoto)
+        photoAdapter!!.notifyDataSetChanged()
+
     }
 
     private fun readPhotosFromDatabase() : ArrayList<AwesomePhoto>{
@@ -136,7 +136,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             showShortToast(this@MainActivity, "Photo not deleted")
         }
-        loadPhotosToGridFromDatabase()
     }
 
     private fun getCurrentDate(): String {
