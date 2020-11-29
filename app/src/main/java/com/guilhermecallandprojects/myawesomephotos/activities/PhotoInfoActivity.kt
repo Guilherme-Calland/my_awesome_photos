@@ -1,5 +1,6 @@
 package com.guilhermecallandprojects.myawesomephotos.activities
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,18 +15,24 @@ class PhotoInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_photo_info)
 
-        var awesomeAwesomePhoto : AwesomePhoto? = null
+        var awesomePhoto : AwesomePhoto? = null
 
         if(intent.hasExtra(MainActivity.EXTRA_PLACE_DETAILS)){
-            awesomeAwesomePhoto = intent.getSerializableExtra(MainActivity.EXTRA_PLACE_DETAILS) as AwesomePhoto
+            awesomePhoto = intent.getSerializableExtra(MainActivity.EXTRA_PLACE_DETAILS) as AwesomePhoto
         }
 
-        if(awesomeAwesomePhoto != null){
-            val imgFile = File(awesomeAwesomePhoto.image)
+        if(awesomePhoto != null){
+            val imgFile = File(awesomePhoto.image)
             val bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath())
             val rotatedBitmap = rotateBitmap(bitmap)
             iv_photo.setImageBitmap(rotatedBitmap)
-            iv_date.text = awesomeAwesomePhoto.date
+            iv_date.text = awesomePhoto.date
+        }
+
+        btn_show_location.setOnClickListener {
+            val intent = Intent(this@PhotoInfoActivity, MapActivity::class.java)
+            intent.putExtra(MainActivity.EXTRA_PLACE_DETAILS,  awesomePhoto)
+            startActivity(intent)
         }
 
     }

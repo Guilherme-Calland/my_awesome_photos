@@ -34,6 +34,8 @@ import java.io.IOException
 import java.io.OutputStream
 import java.util.*
 
+//TODO: adicionar um back toolbar button
+
 class MainActivity : AppCompatActivity() {
     private var saveImageToInternalStorage : Uri? = null
     private var mLatitude : Double = 0.0
