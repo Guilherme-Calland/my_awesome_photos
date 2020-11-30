@@ -18,7 +18,7 @@ class PhotoInfoActivity : AppCompatActivity() {
         var awesomePhoto : AwesomePhoto? = null
 
         if(intent.hasExtra(MainActivity.EXTRA_PLACE_DETAILS)){
-            awesomePhoto = intent.getSerializableExtra(MainActivity.EXTRA_PLACE_DETAILS) as AwesomePhoto
+            awesomePhoto = intent.getParcelableExtra(MainActivity.EXTRA_PLACE_DETAILS) as AwesomePhoto?
         }
 
         if(awesomePhoto != null){
