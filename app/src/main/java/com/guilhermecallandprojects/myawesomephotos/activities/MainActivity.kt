@@ -1,22 +1,28 @@
 package com.guilhermecallandprojects.myawesomephotos.activities
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.location.Location
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Looper
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.location.*
 import com.guilhermecallandprojects.myawesomephotos.R
 import com.guilhermecallandprojects.myawesomephotos.adapter.PhotoAdapter
 import com.guilhermecallandprojects.myawesomephotos.database.DBHelper
@@ -38,8 +44,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private var saveImageToInternalStorage : Uri? = null
-    private var mLatitude : Double = 0.0
-    private var mLongitude : Double = 0.0
+    private var userLatitude : Double = 0.0
+    private var userLongitude : Double = 0.0
     private var recyclerView: RecyclerView? = null
     private var gridLayoutManager: GridLayoutManager?= null
     private var awesomePhotos: ArrayList<AwesomePhoto> ?= null
@@ -53,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             askForPermissions()
         }
         setPhotosClickListeners()
+
     }
 
     private fun loadPhotosToGridFromDatabase() {
@@ -82,16 +89,16 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == Activity.RESULT_OK){
             if(requestCode == CAMERA){
                 val photoTaken : Bitmap = data!!.extras!!.get("data") as Bitmap
 
+                //saved to device
                 saveImageToInternalStorage = saveImageToInternalStorage(photoTaken)
 
+                //save to database
                 addPhotoToDatabase()
 
                 Log.e("Saved Image: ", "Path :: ${saveImageToInternalStorage}")
@@ -106,8 +113,8 @@ class MainActivity : AppCompatActivity() {
             saveImageToInternalStorage.toString(),
             date,
             "",
-            mLatitude,
-            mLongitude
+            userLatitude,
+            userLongitude
         )
         val database = DBHelper(this)
         val addAwesosomePhoto = database.addAwesomePhoto(awesomePhoto)
