@@ -84,9 +84,9 @@ class DBHelper(context: Context?) :
         return awesomePhotosList
     }
 
-    fun deleteAwesomePhoto(awesomePhoto: AwesomePhoto): Int{
+    fun deleteAwesomePhoto(id: Int): Int{
         val database = this.writableDatabase
-        val success = database.delete(TABLE_AWESOME_PHOTOS, KEY_ID + "=" + awesomePhoto.id, null)
+        val success = database.delete(TABLE_AWESOME_PHOTOS, KEY_ID + "=" + id, null)
         database.close()
         return success
     }

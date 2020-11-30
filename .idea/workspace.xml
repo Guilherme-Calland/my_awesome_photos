@@ -11,19 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0437d6d-c8d0-475a-be20-86cc75f13d11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/PhotoInfoActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/PhotoInfoActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/model/AwesomePhoto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/model/AwesomePhoto.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,10 +179,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1846" y="275" width="950" height="537" key="#PSD/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606654256738" />
-    <state x="2100" y="259" width="452" height="583" key="#com.intellij.ide.util.MemberChooser" timestamp="1606597999735">
+    <state x="2100" y="259" width="452" height="583" key="#com.intellij.ide.util.MemberChooser" timestamp="1606726581005">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2100" y="259" width="452" height="583" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606597999735" />
+    <state x="2100" y="259" width="452" height="583" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606726581005" />
     <state x="552" y="205" width="442" height="398" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1606591339022" />
     <state x="2009" y="277" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606643622134">
       <screen x="1366" y="0" width="1920" height="1080" />
@@ -212,10 +200,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2559" y="0" width="717" height="1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606599940043" />
-    <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606503765638">
+    <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606705902972">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606503765638" />
+    <state x="2059" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606705902972" />
     <state x="1994" y="181" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1606504340156">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -233,22 +221,22 @@
     </state>
     <state x="2109" y="298" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606704656615" />
     <state x="558" y="231" width="374" height="337" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1605869633368" />
-    <state width="1874" height="351" key="GridCell.Tab.0.bottom" timestamp="1606145838562">
+    <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1606728089070">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="351" key="GridCell.Tab.0.bottom/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606145838562" />
-    <state width="1874" height="351" key="GridCell.Tab.0.center" timestamp="1606145838562">
+    <state width="1874" height="284" key="GridCell.Tab.0.bottom/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606728089070" />
+    <state width="1874" height="284" key="GridCell.Tab.0.center" timestamp="1606728089070">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="351" key="GridCell.Tab.0.center/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606145838562" />
-    <state width="1874" height="351" key="GridCell.Tab.0.left" timestamp="1606145838562">
+    <state width="1874" height="284" key="GridCell.Tab.0.center/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606728089070" />
+    <state width="1874" height="284" key="GridCell.Tab.0.left" timestamp="1606728089070">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="351" key="GridCell.Tab.0.left/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606145838562" />
-    <state width="1874" height="351" key="GridCell.Tab.0.right" timestamp="1606145838562">
+    <state width="1874" height="284" key="GridCell.Tab.0.left/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606728089070" />
+    <state width="1874" height="284" key="GridCell.Tab.0.right" timestamp="1606728089070">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="351" key="GridCell.Tab.0.right/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606145838562" />
+    <state width="1874" height="284" key="GridCell.Tab.0.right/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606728089070" />
     <state x="1815" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1605712213644">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

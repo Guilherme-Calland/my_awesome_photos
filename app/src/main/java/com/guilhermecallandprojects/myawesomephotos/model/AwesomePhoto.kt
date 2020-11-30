@@ -8,7 +8,7 @@ data class AwesomePhoto(
     val id: Int,
     val image: String?,
     val date: String?,
-    val location: String?,
+    val location: String? = null,
     val latitude: Double,
     val longitude: Double
 ): Parcelable {

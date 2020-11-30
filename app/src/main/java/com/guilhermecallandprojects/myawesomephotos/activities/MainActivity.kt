@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
     private fun setPhotosClickListeners() {
         photoAdapter!!.setOnLongClickListener(object: PhotoAdapter.OnLongClickListener{
             override fun onLongClick(position: Int, photo: AwesomePhoto) {
-                deletePhotoFromDatabase(photo)
+                deletePhotoFromDatabase(position + 1)
             }
         })
         photoAdapter!!.setOnClickListener(object : PhotoAdapter.OnClickListener {
@@ -113,12 +113,9 @@ class MainActivity : AppCompatActivity() {
         val addAwesosomePhoto = database.addAwesomePhoto(awesomePhoto)
 
         //function return a long, so if it returns > 0, it means no errors ocurred
-        if(addAwesosomePhoto > 0){
-            showShortToast(this, "The photo details were added sucessfully")
-        } else {
+        if (addAwesosomePhoto <= 0) {
             showShortToast(this, "Failed to save photo")
         }
-//        loadPhotosToGridFromDatabase()
         awesomePhotos!!.add(awesomePhoto)
         photoAdapter!!.notifyDataSetChanged()
 
@@ -130,9 +127,9 @@ class MainActivity : AppCompatActivity() {
         return awesomePhotosList
     }
 
-    private fun deletePhotoFromDatabase(photo: AwesomePhoto) {
+    private fun deletePhotoFromDatabase(id: Int) {
         val database = DBHelper(this@MainActivity)
-        val wasDeleted = database.deleteAwesomePhoto(photo)
+        val wasDeleted = database.deleteAwesomePhoto(id)
         if (wasDeleted > 0) {
             showShortToast(this@MainActivity, "Photo Deleted")
         } else {
@@ -158,8 +155,6 @@ class MainActivity : AppCompatActivity() {
         ).withListener(object : MultiplePermissionsListener {
             override fun onPermissionsChecked(report: MultiplePermissionsReport?) {
                 if (report!!.areAllPermissionsGranted()) {
-                    showShortToast(this@MainActivity, "Camera usage is granted!")
-
                     val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
                     startActivityForResult(cameraIntent,
                         CAMERA
@@ -175,6 +170,8 @@ class MainActivity : AppCompatActivity() {
 
         }).onSameThread().check()
     }
+
+
 
     private fun showRationalDialogForPermissions() {
         AlertDialog.Builder(this).setMessage("It looks like you have turned off permissions required. It can be enables under application settings.")
