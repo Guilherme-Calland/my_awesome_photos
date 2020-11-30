@@ -2,4 +2,5 @@
     <string name="app_name">My Awesome Photos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_api_key">AIzaSyAJ96eAce3S88q67fi1Uk4DCprYnpKO2EA</string>
 </resources>
