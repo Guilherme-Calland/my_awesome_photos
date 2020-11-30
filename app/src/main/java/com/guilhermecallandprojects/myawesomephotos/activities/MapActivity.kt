@@ -25,16 +25,20 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         if(awesomePhoto != null){
-            setSupportActionBar(toolbar_map)
-            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-            supportActionBar!!.title = awesomePhoto!!.location
-            toolbar_map.setNavigationOnClickListener {
-                onBackPressed()
-            }
+            setUpToolbar()
 
             val supportMapFragment: SupportMapFragment =
                 supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
             supportMapFragment.getMapAsync(this)
+        }
+    }
+
+    private fun setUpToolbar() {
+        setSupportActionBar(toolbar_map)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = awesomePhoto!!.location
+        toolbar_map.setNavigationOnClickListener {
+            onBackPressed()
         }
     }
 
