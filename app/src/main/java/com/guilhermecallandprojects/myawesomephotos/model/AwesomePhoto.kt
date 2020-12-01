@@ -9,8 +9,8 @@ data class AwesomePhoto(
     val image: String?,
     val date: String?,
     val location: String? = null,
-    val latitude: Double,
-    val longitude: Double
+    var latitude: Double,
+    var longitude: Double
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
