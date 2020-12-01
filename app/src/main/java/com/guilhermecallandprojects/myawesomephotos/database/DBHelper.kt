@@ -80,7 +80,6 @@ class DBHelper(context: Context?) :
             db.execSQL(selectQuery)
             return ArrayList()
         }
-
         return awesomePhotosList
     }
 

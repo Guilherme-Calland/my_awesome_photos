@@ -50,6 +50,7 @@ class PhotoInfoActivity : AppCompatActivity() {
             val rotatedBitmap = rotateBitmap(bitmap)
             iv_photo.setImageBitmap(rotatedBitmap)
             iv_date.text = awesomePhoto.date
+            iv_location.text = awesomePhoto.location
         }
 
         btn_show_location.setOnClickListener {

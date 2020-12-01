@@ -44,8 +44,9 @@ class PhotoAdapter(var context: Context, var arrayList: ArrayList<AwesomePhoto>)
         }
         holder.image.setOnLongClickListener{
             onLongClickListener!!.onLongClick(position, awesomePhoto)
-            arrayList.removeAt(position)
             notifyItemRemoved(position)
+            arrayList.removeAt(position)
+            notifyDataSetChanged()
             true
         }
     }

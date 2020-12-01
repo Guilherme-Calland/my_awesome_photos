@@ -7,7 +7,6 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.location.Location
 import android.location.LocationManager
@@ -19,7 +18,6 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
-import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,14 +37,14 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
+import java.text.SimpleDateFormat
 import java.util.*
-
-//TODO: adicionar um back toolbar button
 
 class MainActivity : AppCompatActivity() {
     private var saveImageToInternalStorage : Uri? = null
     private var userLatitude : Double = 0.0
     private var userLongitude : Double = 0.0
+    private var userLocation: String = ""
     private var recyclerView: RecyclerView? = null
     private var gridLayoutManager: GridLayoutManager?= null
     private var awesomePhotos: ArrayList<AwesomePhoto> ?= null
@@ -64,7 +62,6 @@ class MainActivity : AppCompatActivity() {
         }
         setPhotosClickListeners()
         locationClient = LocationServices.getFusedLocationProviderClient(this)
-
     }
 
     private fun loadPhotosToGridFromDatabase() {
@@ -76,13 +73,12 @@ class MainActivity : AppCompatActivity() {
         awesomePhotos = readPhotosFromDatabase()
         photoAdapter = PhotoAdapter(this, awesomePhotos!!)
         recyclerView?.adapter = photoAdapter
-
     }
 
     private fun setPhotosClickListeners() {
         photoAdapter!!.setOnLongClickListener(object: PhotoAdapter.OnLongClickListener{
             override fun onLongClick(position: Int, photo: AwesomePhoto) {
-                deletePhotoFromDatabase(position + 1)
+                deletePhotoFromDatabase(photo.id)
             }
         })
         photoAdapter!!.setOnClickListener(object : PhotoAdapter.OnClickListener {
@@ -113,14 +109,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun addPhotoToDatabase() {
         val date = getCurrentDate()
+        val id: Int
+        if(awesomePhotos!!.size > 0){
+            id = awesomePhotos!!.last().id + 1
+        }else{
+            id = 1
+        }
         val awesomePhoto = AwesomePhoto(
-            0,
+            id,
             saveImageToInternalStorage.toString(),
             date,
-            "",
+            userLocation,
             userLatitude,
             userLongitude
         )
+        if(userLatitude == 0.0 && userLongitude == 0.0){
+
+            showShortToast(this, "Unable to connect to google maps to get location!")
+        }
+
         val database = DBHelper(this)
         val addAwesosomePhoto = database.addAwesomePhoto(awesomePhoto)
 
@@ -150,6 +157,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getCurrentDate(): String {
+
+
         val c = Calendar.getInstance()
         val year = c.get(Calendar.YEAR)
         val month = c.get(Calendar.MONTH)
@@ -214,6 +223,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("Current Location", "latitude: $userLatitude")
             userLongitude = lastLocation.longitude
             Log.i("Current Location", "longitude: $userLongitude")
+
         }
     }
 

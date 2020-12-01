@@ -6,26 +6,11 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="I/Current" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0437d6d-c8d0-475a-be20-86cc75f13d11" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/PhotoInfoActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/activities/PhotoInfoActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/model/AwesomePhoto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/guilhermecallandprojects/myawesomephotos/model/AwesomePhoto.kt" afterDir="false" />
-    </list>
+    <list default="true" id="f0437d6d-c8d0-475a-be20-86cc75f13d11" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,9 +34,9 @@
       <list>
         <option value="navigationResourceFile" />
         <option value="layoutResourceFile" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
         <option value="resourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -67,8 +52,10 @@
     <property name="ResourceManagerPrefKey.ResourceType" value="NAVIGATION" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-view/home/gui/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HappyPlaces_v22/HappyPlaces_v22" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="multi-representation-preview/home/gui/Android/Sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -192,10 +179,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1846" y="275" width="950" height="537" key="#PSD/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606740568184" />
-    <state x="2100" y="259" width="452" height="583" key="#com.intellij.ide.util.MemberChooser" timestamp="1606726581005">
+    <state x="2100" y="259" width="452" height="583" key="#com.intellij.ide.util.MemberChooser" timestamp="1606785212201">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2100" y="259" width="452" height="583" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606726581005" />
+    <state x="2100" y="259" width="452" height="583" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606785212201" />
     <state x="552" y="205" width="442" height="398" key="#com.intellij.ide.util.MemberChooser/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1606591339022" />
     <state x="2009" y="277" width="624" height="533" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606643622134">
       <screen x="1366" y="0" width="1920" height="1080" />
@@ -229,27 +216,27 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2175" y="355" width="357" height="384" key="AndroidCreateXmlResourceDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606704721591" />
-    <state x="2109" y="298" width="374" height="337" key="FileChooserDialogImpl" timestamp="1606704656615">
+    <state x="2109" y="298" width="374" height="337" key="FileChooserDialogImpl" timestamp="1606787345863">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2109" y="298" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606704656615" />
+    <state x="2109" y="298" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606787345863" />
     <state x="558" y="231" width="374" height="337" key="FileChooserDialogImpl/48.27.1318.741/1366.0.1920.1080@48.27.1318.741" timestamp="1605869633368" />
-    <state width="1874" height="240" key="GridCell.Tab.0.bottom" timestamp="1606743746334">
+    <state width="1874" height="351" key="GridCell.Tab.0.bottom" timestamp="1606824672416">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="240" key="GridCell.Tab.0.bottom/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606743746334" />
-    <state width="1874" height="240" key="GridCell.Tab.0.center" timestamp="1606743746334">
+    <state width="1874" height="351" key="GridCell.Tab.0.bottom/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606824672416" />
+    <state width="1874" height="351" key="GridCell.Tab.0.center" timestamp="1606824672416">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="240" key="GridCell.Tab.0.center/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606743746334" />
-    <state width="1874" height="240" key="GridCell.Tab.0.left" timestamp="1606743746334">
+    <state width="1874" height="351" key="GridCell.Tab.0.center/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606824672416" />
+    <state width="1874" height="351" key="GridCell.Tab.0.left" timestamp="1606824672416">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="240" key="GridCell.Tab.0.left/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606743746334" />
-    <state width="1874" height="240" key="GridCell.Tab.0.right" timestamp="1606743746334">
+    <state width="1874" height="351" key="GridCell.Tab.0.left/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606824672416" />
+    <state width="1874" height="351" key="GridCell.Tab.0.right" timestamp="1606824672416">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="240" key="GridCell.Tab.0.right/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606743746334" />
+    <state width="1874" height="351" key="GridCell.Tab.0.right/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606824672416" />
     <state x="1815" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1605712213644">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -263,6 +250,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1852" y="283" width="927" height="528" key="psd.add.library.dependency.panel.dimension/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606740566534" />
+    <state x="2043" y="312" width="556" height="462" key="refactoring.ChangeSignatureDialog" timestamp="1606786895167">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2043" y="312" width="556" height="462" key="refactoring.ChangeSignatureDialog/48.27.1318.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1606786895167" />
     <state x="371" y="174" key="run.anything.popup" timestamp="1605807643138">
       <screen x="48" y="27" width="1318" height="741" />
     </state>

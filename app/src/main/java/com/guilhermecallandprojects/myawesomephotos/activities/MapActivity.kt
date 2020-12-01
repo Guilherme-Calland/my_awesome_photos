@@ -36,18 +36,17 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun setUpToolbar() {
         setSupportActionBar(toolbar_map)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.title = awesomePhoto!!.location
+        supportActionBar!!.title = ""
         toolbar_map.setNavigationOnClickListener {
             onBackPressed()
         }
     }
 
     override fun onMapReady(map: GoogleMap?) {
-        val tempLat: Double = 0.0
-        val tempLng: Double = 0.0
+        val tempLat: Double = awesomePhoto!!.latitude
+        val tempLng: Double = awesomePhoto!!.longitude
         val position = LatLng(tempLat, tempLng)
-//        val position = LatLng(awesomePhoto!!.latitude, awesomePhoto!!.longitude)
-        map!!.addMarker(MarkerOptions().position(position).title(awesomePhoto!!.location))
+        map!!.addMarker(MarkerOptions().position(position))
         val newLatLngZoom = CameraUpdateFactory.newLatLngZoom(position, 15f)
         map.animateCamera(newLatLngZoom)
     }
